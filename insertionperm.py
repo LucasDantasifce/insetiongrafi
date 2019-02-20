@@ -43,7 +43,7 @@ tamlista = list(it.permutations(list(range(6))))
 tempoIteracao = []
 listaOrig = []
 for lista in tamlista:
- tempoIteracao.append(timeit.timeit("insertionSort({})".format(list(lista).copy()),setup="from main import insertionSort",number=1))
+ tempoIteracao.append(timeit.timeit("insertionSort({})".format(list(lista).copy()),setup="from __main__ import insertionSort",number=1))
  listaOrig.append(list(lista))
 
 print("O tempo minimo foi de {}".format(min(tempoIteracao)))
